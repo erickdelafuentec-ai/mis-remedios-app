@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBF9F4">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0D5C63"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="18dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mis Remedios"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/tvFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#D8EDEC"
+                android:textSize="17sp"/>
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/btnConfig"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="#33FFFFFF"
+            android:src="@android:drawable/ic_menu_manage"
+            android:contentDescription="Ajustes"/>
+    </LinearLayout>
+
+    <!-- Boton flotante agregar -->
+    <Button
+        android:id="@+id/fabAgregar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/btn_naranjo"
+        android:text="＋  Agregar remedio"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_above="@id/fabAgregar"
+        android:padding="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- aviso permisos -->
+            <LinearLayout
+                android:id="@+id/avisoPermisos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_ahora"
+                android:padding="16dp"
+                android:visibility="gone"
+                android:layout_marginBottom="14dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚠️ Falta un permiso para que la alarma suene a la hora exacta."
+                    android:textColor="#8A5A1E"
+                    android:textSize="17sp"
+                    android:textStyle="bold"/>
+                <Button
+                    android:id="@+id/btnArreglarPerm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_naranjo"
+                    android:text="Activar permiso"
+                    android:textColor="#FFFFFF"
+                    android:paddingHorizontal="20dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📅 Hoy"
+                android:textColor="#1A2327"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:paddingVertical="10dp"/>
+            <LinearLayout
+                android:id="@+id/contHoy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="💊 Mis medicamentos"
+                android:textColor="#1A2327"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:paddingTop="24dp"
+                android:paddingBottom="10dp"/>
+            <LinearLayout
+                android:id="@+id/contMeds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
