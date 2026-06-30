@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8703A"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔔"
+        android:textSize="80sp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hora de tu remedio"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/aNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:layout_marginTop="14dp"/>
+
+    <TextView
+        android:id="@+id/aDosis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#FFF1E8"
+        android:textSize="24sp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="40dp"/>
+
+    <Button
+        android:id="@+id/btnTomado"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/btn_blanco"
+        android:text="✓  Ya lo tomé"
+        android:textColor="#E8703A"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="14dp"/>
+
+    <Button
+        android:id="@+id/btnPosponer"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@android:color/transparent"
+        android:text="Recordar en 10 minutos"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.MisRemedios" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/verde</item>
+        <item name="colorSecondary">@color/naranjo</item>
+        <item name="android:windowBackground">@color/fondo</item>
+        <item name="android:statusBarColor">@color/verde</item>
+    </style>
+</resources>
